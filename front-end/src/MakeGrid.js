@@ -20,14 +20,14 @@ export const MakeGrid = () => {
 
   return (
     <div className='min-h-screen flex items-center justify-center'>
-      <div className='grid grid-cols-8'>
+      <div className='grid grid-cols-10'>
         {/* <div className={colClass}> */}
         {/* <div className={`grid grid-cols-${boxArray.length}`}> */}
         {/* <div class= "grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4"> */}
         
-        {/* {boxArray.map(row => row.map(col => <Boxes box={col} />))} */}
+        {boxArray.map(row => row.map(col => <Boxes box={col} />))}
 
-        <Boxes box={boxArray[2][2]} />
+        {/* <Boxes box={boxArray[2][2]} /> */}
       </div>
     </div>
   )

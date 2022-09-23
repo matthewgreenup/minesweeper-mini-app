@@ -28,34 +28,34 @@ export const Boxes = props => {
         <button onClick={()=>{
             
             // let newObject = boxArray[props.box.row][props.box.col]
-            let temp = boxArray;
+            // let temp = boxArray;
             // console.log("01 new obejct", newObject)
             // newObject = {...newObject, beenClicked: true}
             // console.log("02 new obejct", newObject)
-            setBoxArray(curr => 
-                curr.map((row, index) => {
+            // setBoxArray(curr => 
+            //     curr.map((row, index) => {
                     
-                    console.log('row: ', row)
-                    // console.log('maybe box row ', props.box.row)
-                    console.log('full row maybe', boxArray[props.box.row])
-                    console.log('this is the props column: ', props.box.col)
-                    // console.log('maybe box array ', boxArray[2][2])
-                    if(row==boxArray[props.box.row]){
-                        row.map(obj => {
-                            console.log('obj: ', obj.col)
-                            if(obj.col == props.box.col){
-                                return {...obj, beenClicked:true}
-                                // return obj
-                            }else{
-                                return obj
-                            }
-                            // return boxArray[1][1]
-                        })
-                    }else{
-                        return row
-                    }
-                })
-                )
+            //         console.log('row: ', row)
+            //         // console.log('maybe box row ', props.box.row)
+            //         console.log('full row maybe', boxArray[props.box.row])
+            //         console.log('this is the props column: ', props.box.col)
+            //         // console.log('maybe box array ', boxArray[2][2])
+            //         if(row==boxArray[props.box.row]){
+            //             row.map(obj => {
+            //                 console.log('obj: ', obj.col)
+            //                 if(obj.col == props.box.col){
+            //                     return {...obj, beenClicked:true}
+            //                     // return obj
+            //                 }else{
+            //                     return obj
+            //                 }
+            //                 // return boxArray[1][1]
+            //             })
+            //         }else{
+            //             return row
+            //         }
+            //     })
+            //     )
 
 
 

@@ -24,7 +24,7 @@ function randomNumbers (numBombs, boardSize) {
 function makeBoxArray () {
   let boxArray = []
   let numBombs = 10
-  let boardSize = 8
+  let boardSize = 10
   let idCounter = 0
   let bombLocations = randomNumbers(numBombs, boardSize)
 
