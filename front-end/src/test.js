@@ -4,23 +4,23 @@ import { AppContext } from './App'
 
 
 export const Boxes = props => {
-    const [beenClicked, setBeenClicked] = useState(props.box.beenClicked)
+//     const [returnValue, setReturnValue] = useState()
     const { boxArray, setBoxArray} = useContext(AppContext)
-// useEffect(()=>{
-// // props.box = boxArray[props.box.row][props.box.col]
-// console.log('current box ' , boxArray[props.box.row][props.box.col].boxId)
-// }, [boxArray])
+useEffect(()=>{
+// props.box = boxArray[props.box.row][props.box.col]
+console.log('current box ' , boxArray[props.box.row][props.box.col].boxId)
+}, [boxArray])
 
 
   return (
   <>
-    { beenClicked ? (
+    { props.box.beenClicked ? (
         <button onClick={()=>{
             console.log('been clicked top', props.box.beenClicked)
 
         }} className='max-w-50 bg-red-500 hover:bg-teal-700 text-white font-bold h-20 w-20 border border-white-700'>
   
-        <p>{`${props.box.boxId} ${props.box.isMine} ${props.box.beenClicked}`}</p>
+        <p>{`${props.box.boxId} ${props.box.isMine}`}</p>
         
         </button>
 
@@ -31,13 +31,12 @@ export const Boxes = props => {
 
             setBoxArray(curr => {
                 curr[props.box.row][props.box.col].beenClicked = true;
-                setBeenClicked(true);
                 return curr;
             })
 
         }}className='max-w-50 bg-teal-500 hover:bg-teal-700 text-white font-bold h-20 w-20 border border-white-700'>
   
-        <p>{`${props.box.boxId} ${props.box.isMine} ${props.box.beenClicked}`}</p>
+        <p>{`${props.box.boxId} ${props.box.isMine}`}</p>
         
         </button>
     )}
